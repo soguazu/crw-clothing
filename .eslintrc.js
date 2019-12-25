@@ -1,24 +1,23 @@
 module.exports = {
-    "env": {
-        "browser": true,
-        "es6": true
+  env: {
+    browser: true,
+    es6: true
+  },
+  extends: 'airbnb',
+  globals: {
+    Atomics: 'readonly',
+    SharedArrayBuffer: 'readonly'
+  },
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true
     },
-    "extends": "airbnb",
-    "globals": {
-        "Atomics": "readonly",
-        "SharedArrayBuffer": "readonly"
-    },
-    "parserOptions": {
-        "ecmaFeatures": {
-            "jsx": true
-        },
-        "ecmaVersion": 2018,
-        "sourceType": "module"
-    },
-    "plugins": [
-        "react"
-    ],
-    "rules": {
-        quotes: ["error", "single"]
-    }
+    ecmaVersion: 2018,
+    sourceType: 'module'
+  },
+  plugins: ['react', 'prettier'],
+  rules: {
+    quotes: [2, 'single', 'avoid-escape'],
+    'prettier/prettier': 'error'
+  }
 };
